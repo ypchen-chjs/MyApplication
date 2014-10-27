@@ -21,6 +21,20 @@
         <activity
             android:name=".SecondActivity"
             android:label="@string/title_activity_second" >
+            <!-- 建立意图 -->
+            <intent-filter>
+                <action android:name="org.demo.cyp.SecondActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ThirdActivity"
+            android:label="@string/title_activity_third" >
+            <!-- 建立意图 -->
+            <intent-filter>
+                <action android:name="org.demo.cyp.ThirdActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
 

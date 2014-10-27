@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,6 +20,10 @@ public class MyActivity extends Activity {
     boolean[] itemsChecked = new boolean[items.length];
 
     ProgressDialog progressDialog;
+
+    //从意图返回数据需要一个识别码
+    //如果请求码为-1，则没有结果返回
+    int request_Code =1;
 
     @Override
     protected Dialog onCreateDialog(int id) {
@@ -94,6 +99,37 @@ public class MyActivity extends Activity {
             }
         });
 
+    }
+
+    public void onClick4(View v){
+        /**
+         * 使用意图连接活动
+         */
+        startActivity(new Intent("org.demo.cyp.SecondActivity"));
+        //or use
+        //startActivity(new Intent(this,SecondActivity.class));
+    }
+
+    /**
+     * 从意图中返回数据
+     * @param v
+     */
+    public void onClick5(View v){
+        startActivityForResult(new Intent("org.demo.cyp.SecondActivity"),request_Code);
+    }
+
+    /**
+     * 当一个活动返回时，调用此方法
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
+    public void onActivityResult(int requestCode,int resultCode,Intent data){
+        if(requestCode == request_Code){
+            if(resultCode == RESULT_OK){
+                Toast.makeText(this,data.getData().toString(),Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 
     /**

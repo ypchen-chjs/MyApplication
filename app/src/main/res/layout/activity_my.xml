@@ -40,7 +40,14 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_dialog4"
-        android:text="Click to display a detailed progress dialog"
+        android:text="Click to display second activity"
         android:onClick="onClick4"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_dialog5"
+        android:text="from second activity return data"
+        android:onClick="onClick5"/>
 
 </LinearLayout>
