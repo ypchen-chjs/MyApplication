@@ -130,6 +130,33 @@ public class MyActivity extends Activity {
                 Toast.makeText(this,data.getData().toString(),Toast.LENGTH_SHORT).show();
             }
         }
+        if(requestCode == 6){
+            if(resultCode == RESULT_OK){
+                Toast.makeText(this,Integer.toString(data.getIntExtra("age3",0)),Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,data.getData().toString(),Toast.LENGTH_SHORT).show();
+            }
+        }
+
+
+    }
+
+    public void onClick6(View v){
+        Intent i = new Intent("org.demo.cyp.ThirdActivity");
+
+        //use putExtra() to add new name/value pairs
+        i.putExtra("str1","This is a string");
+        i.putExtra("age1",25);
+
+        //use a Bundle object to add new name/values pairs
+        Bundle extras =new Bundle();
+        extras.putString("str2","This is another string");
+        extras.putInt("age2",25);
+        //attach the Bundle object to the Intent object
+        i.putExtras(extras);
+
+        //start the activity to get a result back
+        startActivityForResult(i,6);
+
     }
 
     /**

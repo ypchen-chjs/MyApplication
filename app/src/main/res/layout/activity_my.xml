@@ -14,26 +14,26 @@
         <!--android:layout_width="wrap_content"-->
         <!--android:layout_height="wrap_content" />-->
 
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_dialog"
-        android:text="Click to display a dialog"
-        android:onClick="onClick" />
+    <!--<Button-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/btn_dialog"-->
+        <!--android:text="Click to display a dialog"-->
+        <!--android:onClick="onClick" />-->
 
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_dialog2"
-        android:text="Click to display a progress dialog"
-        android:onClick="onClick2"/>
+    <!--<Button-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/btn_dialog2"-->
+        <!--android:text="Click to display a progress dialog"-->
+        <!--android:onClick="onClick2"/>-->
 
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_dialog3"
-        android:text="Click to display a detailed progress dialog"
-        android:onClick="onClick3"/>
+    <!--<Button-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/btn_dialog3"-->
+        <!--android:text="Click to display a detailed progress dialog"-->
+        <!--android:onClick="onClick3"/>-->
 
 
     <Button
@@ -49,5 +49,12 @@
         android:id="@+id/btn_dialog5"
         android:text="from second activity return data"
         android:onClick="onClick5"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_dialog6"
+        android:text="passing data with intent to third activity"
+        android:onClick="onClick6"/>
 
 </LinearLayout>

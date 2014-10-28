@@ -13,4 +13,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_MainActivity"
+        android:text="Click to return to main activity"
+        android:onClick="onClick"/>
+
 </RelativeLayout>
